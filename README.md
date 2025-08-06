@@ -70,22 +70,6 @@ Example Axios setup:
 axios.defaults.baseURL = "http://localhost/api/";
 axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 ```
-
-## 📁 Project Structure
-
-```
-frontend-ppdb/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── utils/
-│   └── ...
-├── public/
-├── .env
-├── package.json
-└── README.md
-```
-
 ## ✨ TODO
 
 * [x] Form Login
