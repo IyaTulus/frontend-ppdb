@@ -27,7 +27,6 @@
    ```bash
    git clone https://github.com/yourusername/frontend-ppdb.git
    cd frontend-ppdb
-````
 
 2. **Install dependencies:**
 
@@ -68,13 +67,28 @@ You can configure API base URL in your Axios setup or environment file if used.
 Example Axios setup:
 
 ```ts
-axios.defaults.baseURL = "http://localhost/api/"; //local
+axios.defaults.baseURL = "http://localhost/api/";
 axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+```
+
+## 📁 Project Structure
+
+```
+frontend-ppdb/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── utils/
+│   └── ...
+├── public/
+├── .env
+├── package.json
+└── README.md
 ```
 
 ## ✨ TODO
 
-* [✅] Form Login
+* [x] Form Login
 * [ ] Form registration
 * [ ] Role-based routing
 * [ ] Validation & error handling
@@ -88,4 +102,4 @@ Created by [Aldi Tulus Pribadi](https://github.com/aldtulus).
 ---
 
 Feel free to contribute by creating issues or pull requests.
-
+```
