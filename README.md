@@ -1,6 +1,3 @@
-Berikut README untuk repositori `frontend-ppdb` dalam bahasa Inggris. Kamu bisa langsung salin ke dalam file `README.md`:
-
-````markdown
 # frontend-ppdb
 
 **frontend-ppdb** is the frontend web interface for the Digital-Based New Student Admission (PPDB) system, designed using React and TypeScript. This project is part of a microservices-based architecture, communicating with backend services through an API Gateway (NGINX).
@@ -92,7 +89,3 @@ Created by [Aldi Tulus Pribadi](https://github.com/aldtulus).
 
 Feel free to contribute by creating issues or pull requests.
 
-```
-
-Jika kamu ingin saya sesuaikan bagian author, repo URL, atau API detail lain, tinggal beri tahu.
-```
