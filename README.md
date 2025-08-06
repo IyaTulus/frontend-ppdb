@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+Berikut README untuk repositori `frontend-ppdb` dalam bahasa Inggris. Kamu bisa langsung salin ke dalam file `README.md`:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+````markdown
+# frontend-ppdb
 
-## Available Scripts
+**frontend-ppdb** is the frontend web interface for the Digital-Based New Student Admission (PPDB) system, designed using React and TypeScript. This project is part of a microservices-based architecture, communicating with backend services through an API Gateway (NGINX).
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- ✅ User login and session management
+- 📄 View and display user profile (`/me` endpoint)
+- 🔒 JWT Bearer Token authentication
+- 🎨 Clean, modern UI using Tailwind CSS
+- 📦 Axios integration with bearer token support
+- 🔁 Auto-refresh / revalidation of user data
+- 🌐 API Gateway-compatible requests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🔧 Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**
+- **TypeScript**
+- **Axios**
+- **Tailwind CSS**
+- **Docker** (via backend services)
+- **Nginx** as API Gateway
 
-### `npm test`
+## 🧪 Installation & Run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/frontend-ppdb.git
+   cd frontend-ppdb
+````
 
-### `npm run build`
+2. **Install dependencies:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run development server:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm run dev
+   ```
 
-### `npm run eject`
+> Ensure the backend (API) is running at `http://localhost/api/` via NGINX (Docker Gateway).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔐 Authentication Flow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **Login Endpoint:** `POST http://localhost/api/login`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  * Response:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```json
+    {
+      "access_token": "token",
+      "token_type": "bearer",
+      "message": ""
+    }
+    ```
 
-## Learn More
+* **Authenticated Endpoint:** `GET http://localhost/api/me`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  * Requires `Authorization: Bearer <access_token>`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠 Configuration
+
+You can configure API base URL in your Axios setup or environment file if used.
+
+Example Axios setup:
+
+```ts
+axios.defaults.baseURL = "http://localhost/api/"; //local
+axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+```
+
+## ✨ TODO
+
+* [✅] Form Login
+* [ ] Form registration
+* [ ] Role-based routing
+* [ ] Validation & error handling
+* [ ] User dashboard
+* [ ] Responsive design improvements
+
+## 👨‍💻 Author
+
+Created by [Aldi Tulus Pribadi](https://github.com/aldtulus).
+
+---
+
+Feel free to contribute by creating issues or pull requests.
+
+```
+
+Jika kamu ingin saya sesuaikan bagian author, repo URL, atau API detail lain, tinggal beri tahu.
+```
